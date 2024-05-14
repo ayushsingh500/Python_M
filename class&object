@@ -1,0 +1,368 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "536c3b0e-9606-425e-ab64-defaf8f150e5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " class house:\n",
+    "     color=\"white\"\n",
+    "     room=5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "f70df72f-a1ce-499a-a8a4-471e8fb3f0bd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "white 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# object \n",
+    "h1=house()\n",
+    "print(h1.color, h1.room)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "97c321cb-4dd8-4f2f-a443-8d6a61b597d0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "h2=house()\n",
+    "print(h2.room)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "5fe464b3-a2a1-4c83-9343-7f70eda1dbbb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<__main__.house at 0x2004829b6d0>"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "h2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "0054bcde-4c8c-4d9f-952e-733dffa0b97a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class house: \n",
+    "    # class variable: both object and class can access the vaariable\n",
+    "     color=\"white\"\n",
+    "     room=5\n",
+    "     def info(self):\n",
+    "        print(\" house has characterstic\",self.color, self.room)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "02994ffc-41ae-4d87-8ca3-6165f98c0af0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " house has characterstic yellow 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "h1=house()\n",
+    "h1.color=\"yellow\"\n",
+    "h1.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "ba35e293-3765-496a-9465-09d56bd9bb91",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'white'"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "house.color"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "58c928f1-5432-41a8-bd40-e8822d6ad1ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'white'"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "h1.color"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "256e0156-ee92-4ef6-a249-0ec34b1168b3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class house:\n",
+    "    def __init__(self):\n",
+    "        print(\"hey\",self)\n",
+    "        # self- tells us the current memory adress of the object"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "33a69ea4-7195-4845-b15b-265364a5d293",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hey <__main__.house object at 0x0000020049615720>\n",
+      "<__main__.house object at 0x0000020049615720>\n"
+     ]
+    }
+   ],
+   "source": [
+    "h1=house()\n",
+    "print(h1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "5b2a59f0-2683-47ff-9b90-017497ec7f35",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hey <__main__.house object at 0x00000200496557B0>\n",
+      "<__main__.house object at 0x00000200496557B0>\n"
+     ]
+    }
+   ],
+   "source": [
+    "h2=house()\n",
+    "print(h2)"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "0e023508-3a10-4c83-85bb-b5837bc81ee7",
+   "metadata": {},
+   "source": [
+    "class house:\n",
+    "    def __init__(self,x):\n",
+    "        print(\"hey\",self,x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "8897b2b9-9211-4448-a3ab-8b0c4b086371",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# house() is basically a constractor of a class\n",
+    "# constructor is the funct\n",
+    "# function is __init__()\n",
+    "# self\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "4c9f4e26-7d37-4425-9507-c9cf226f4d3a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class house:\n",
+    "    def __init__(self,x):\n",
+    "        self.color=x\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "0843808d-a4e8-40ea-9f95-7d1ec09a4d7a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'pink'"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "h1=house(\"pink\")\n",
+    "h1.color\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "4e96a3ce-3fc2-44d7-812f-8b0b3aa09f37",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "class house:\n",
+    "    def __init__(self,color,room):\n",
+    "        # instance variable\n",
+    "        self.color=color\n",
+    "        self.room=room\n",
+    "h2=house(\"green\",4)\n",
+    "h2.room"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "4d14f0d0-1421-4aba-a565-1a5b7a70db20",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class employe:\n",
+    "    company=\"regex software\"\n",
+    "    def __init__(self,employe_name,email,employe_id,salary):\n",
+    "        self.employe_id=employe_id\n",
+    "        self.employe_name=employe_name\n",
+    "        self.salary=salary\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "b8984864-d6b8-4b5b-aaa7-fe1b6fae9844",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "ayushsinghtanwar@gmail.com\n"
+     ]
+    },
+    {
+     "ename": "AttributeError",
+     "evalue": "'employe' object has no attribute 'email'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[36], line 3\u001b[0m\n\u001b[0;32m      1\u001b[0m E1\u001b[38;5;241m=\u001b[39memploye(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mayush\u001b[39m\u001b[38;5;124m\"\u001b[39m,\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mayushsinghtanwar@gmail.com\u001b[39m\u001b[38;5;124m\"\u001b[39m,\u001b[38;5;241m11\u001b[39m,\u001b[38;5;241m200000\u001b[39m)\n\u001b[0;32m      2\u001b[0m \u001b[38;5;28mprint\u001b[39m(E1\u001b[38;5;241m.\u001b[39memploye_name)\n\u001b[1;32m----> 3\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[43mE1\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43memail\u001b[49m)\n\u001b[0;32m      4\u001b[0m \u001b[38;5;28mprint\u001b[39m(E1\u001b[38;5;241m.\u001b[39msalary)\n",
+      "\u001b[1;31mAttributeError\u001b[0m: 'employe' object has no attribute 'email'"
+     ]
+    }
+   ],
+   "source": [
+    "E1=employe(\"ayush\",\"ayushsinghtanwar@gmail.com\",11,200000)\n",
+    "print(E1.employe_name)\n",
+    "print(E1.email)\n",
+    "print(E1.salary)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c0cae405-c038-4545-9e63-42de9417cd9b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
